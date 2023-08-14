@@ -38,4 +38,4 @@ jobs:
                     password: ${{ secrets.REGISTRY_PASSWORD }}
             -   run: |
                     docker build --build-arg DB_URL='${{secrets.DB_URL}}' --build-arg PORT=80 -f ./Dockerfile . -t '${{ secrets.REGISTRY_LOGIN_SERVER }}/backend:latest'
-                    docker push '${{ secrets.REGISTRY_LOGIN_SERVER }}/api2:latest'
+                    docker push '${{ secrets.REGISTRY_LOGIN_SERVER }}/backend:latest'
